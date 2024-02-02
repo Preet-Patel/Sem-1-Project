@@ -89,11 +89,15 @@ class Home: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate {
                 // Add your logic for Weather option here
             }
         }
+      
+        // add action for "Cancel" option
+        let Cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         // add the actions to the alert
         alert.addAction(newsAction)
         alert.addAction(locationAction)
         alert.addAction(weatherAction)
+        alert.addAction(Cancel)
         
         // present the alert
         present(alert, animated: true, completion: nil)
